@@ -1,0 +1,93 @@
+﻿@model HTML_Editor.Models.HtmlTxtModel
+@{
+    ViewBag.Title = "HTML Editor";
+}
+@using (Html.BeginForm("Index", "Run", FormMethod.Post))
+{
+<div id="MAIN_TOP">
+    @if (Model.ShowOriginalFileID == "noneVALX") { <div id="Top_MessageBox">Original Edit</div>}
+    <div id="LOGO"><a href="Index.html"><img src="~/Images/MV-Logo.png" width="80" height="80" /></a></div>
+    <div id="Navigation">
+
+        @if (Model.ShowErrorBox == false)
+        {
+            <Button ID="Button" runat="server" class="BButtons" type="submit" name="BTNcommand" value="RunBTN">RUN <img src="~/Images/Run.png" width="26" height="26" /></Button>
+            <Button ID="Button" runat="server" class="BButtons" type="submit" name="BTNcommand" value="SaveBTN">Save <img src="~/Images/Save.png" width="26" height="26" /></Button>
+            @Html.HiddenFor(m => m.ShowEditOption)
+            if (Model.ShowEditOption == true)
+            {
+                <Button ID="Button" runat="server" class="BButtons" type="submit" name="BTNcommand" value="EditBTN">Edit <img src="~/Images/Edit.png" width="26" height="26" /></Button>
+            }
+            <Button ID="Button" runat="server" class="BButtons" type="submit" name="BTNcommand" value="ShareURL">Share <img src="~/Images/Share.png" width="26" height="26" /></Button>
+            @Html.HiddenFor(m => m.ShowOriginalFileID)
+            if (Model.ShowOriginalFileID != "noneVALX")
+            {
+                <Button ID="Button" runat="server" class="BButtons" type="submit" name="BTNcommand" value="RevertBTN">Check Original <img src="~/Images/Revert.png" width="26" height="26" /></Button>
+            }
+            @Html.HiddenFor(m => m.ShowNextFileID)
+            if (Model.ShowNextFileID != "noneVALX")
+            {
+                <Button ID="Button" runat="server" class="BButtons" type="submit" name="BTNcommand" value="NextFileBTN">Next Edit<img src="~/Images/NextFile.png" width="26" height="26" /></Button>
+            }
+        }
+        <Button ID="Button" runat="server" class="BButtonsRH" type="submit" name="BTNcommand" value="Show_Hide_Settings">Settings <img src="~/Images/Settings.png" width="37" height="37" /></Button>
+        @Html.HiddenFor(m => m.ShowURLTextBox)
+        @if (Model.ShowURLTextBox == true)
+        {
+            <div id="ID_TextBox_Holder">
+                <div id="URL_TextDIV">URL ID:</div><div id="URL_TextBoxDIV">@Html.TextBox("asd", "Value", new { @class = "form-control", @style = "background-color: Black" })</div>
+            </div>
+        }
+        @if (Model.ShowHideVal == true)
+        {
+            <div id="DropDown" class="dropdown-content">
+                <Button ID="Button" runat="server" class="ButtonDrop" type="submit" name="BTNcommand" value="EnterHTMLURL">Enter HTML URL</Button>
+                <Button ID="Button" runat="server" class="ButtonDrop" type="submit" name="BTNcommand" value="GenerateURL">Generate New URL</Button>
+                <Button ID="Button" runat="server" class="ButtonDrop" type="submit" name="BTNcommand" value="CloseDropDown">Close</Button>
+            </div>
+        }
+    </div>
+</div>
+    <div id="SPLIT_MAIN"></div>
+    <div id="#MAIN_BODY">
+        @if(Model.ShowMainBodyField == true)
+        { 
+        <table>
+            <thead>
+                <tr>
+                    <th data-type="numeric">HTML CODE <span class="resize-handle"></span></th>
+                    <th data-type="text-short">HTML PREVIEW <span class="resize-handle"></span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+
+                        @Html.TextAreaFor(Model => Model.TxtEditorText, new { id = "EditorTextBox1", style = " min-width:100%; max-width:100%;min-height:800px;height:800;width:100%;" })
+
+
+                    </td><!-- HTML EDITOR SECTION. -->
+                    <td>
+                        @Html.HiddenFor(m => m.OpenHTMLFIle)<!--//Keep the data alive-->
+                        @if (Model.OpenHTMLFIle == null) 
+                        {
+                        <label runat="server">Press 'RUN' Button To Show Preview</label>
+                        }
+                        else
+                        {
+                        <iframe src="@Url.Content("/" + Model.OpenHTMLFIle)" name="iframe_a" style="height: 100%; width: 100%; resize:both;" title="Iframe Example"></iframe>
+                        }
+
+                    </td><!-- HTML VIEW. -->
+                </tr>
+            </tbody>
+
+        </table>
+        }
+        @if(Model.ShowErrorBox==true)
+        { 
+            <div id="ERROR_DIV"><label runat="server">@ViewBag.ErrorText1</label></div>
+        }
+    </div>
+}
+<div id="FOOTER_Main_Info"><label runat="server">@ViewBag.WarningText</label><br /><label runat="server">@ViewBag.WarningText2</label></div>

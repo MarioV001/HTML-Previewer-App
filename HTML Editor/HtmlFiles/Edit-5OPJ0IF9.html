@@ -1,0 +1,228 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MV Build</title>
+<link href="./CSS/Styles.css" rel="stylesheet" type="text/css" />
+<link href="CSS/Styles2.css" rel="stylesheet" type="text/css" />
+<link href="Styles3.css" rel="stylesheet" type="text/css" />
+<link href="./CSS/Menu_B1.css" rel="stylesheet" type="text/css" />
+<link href="CSS/2nd.css" rel="stylesheet" type="text/css" />
+<link href="CSS/txt.css" rel="stylesheet" type="text/css" />
+<link href="CSS/Menu2.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="Main">
+<div id="Shrink_ALL">
+        <div id="Holder">
+            <div id="Logo_Holder"></div>
+            <div id="Right_Menu">
+				<script type="text/javascript">
+					window.onload = function(){ 
+						var submitbutton = document.getElementById("tfq");
+						if(submitbutton.addEventListener){
+							submitbutton.addEventListener("click", function() {
+								if (submitbutton.value == 'Search website'){
+									submitbutton.value = '';
+								}
+							});
+						}
+					}
+				</script>
+<!-- CSS styles for standard search box with placeholder text-->
+<style type="text/css">
+		#tfnewsearch{
+		float:right;
+		padding:20px;
+	}
+	.tftextinput{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton {
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		background: #0095cd;
+		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	.tfbutton:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+</style>
+<!-- HTML for SEARCH BAR -->
+	<div id="tfheader">
+		<form id="tfnewsearch" method="get" action="http://www.google.com">
+		        <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+		</form>
+	<div class="tfclear"></div>
+	</div>
+			</div>
+        </div>
+        <div id="Main_Holder">
+            <div id="Blue_Menu">
+            	<ul>
+                	<li>Home</li>
+                  	<li><a href="Store.html">Store</a></li>
+                    <li><a href="Workouts.html">Workouts</a></li>
+                    <li><a href="Nutrition.html">Nutrition</a></li>
+                    <li><a href="suppliments.html">Supliments</a></li>
+                    <li><a href="Video.html">Motivation</a></li>
+                    <li>More</li>
+                    
+                </ul>
+            </div>
+            <div id="Silver_Bat_Seperator">
+            <p><span id="message"></span></p>
+            <script type="text/javascript">
+				function nextMsg(i) {
+					if (messages.length == i) {
+						i = 1;
+					}
+					$('#message').html(messages[i]).fadeIn(500).delay(1000).fadeOut(500, function() {
+						nextMsg(i + 1);
+					});	  
+				};
+			
+				var messages = [
+					"Welcome",
+					"Online Body Building",
+					"Supliment Store",
+					"Differnet workout plans"
+					];
+				
+				$('#message').hide();
+				
+				nextMsg(0);
+			</script>
+
+        	</div>
+            <div id="Left_Story_Board">
+            <img id="img" src="Img/startsometinhg.png">
+            
+            <script type = "text/javascript">
+			  function displayNextImage() {
+				  x = (x === images.length - 1) ? 0 : x + 1;
+				  document.getElementById("img").src = images[x];
+			  }
+	
+			  function displayPreviousImage() {
+				  x = (x <= 0) ? images.length - 1 : x - 1;
+				  document.getElementById("img").src = images[x];
+			  }
+	
+			  function startTimer() {
+				  setInterval(displayNextImage, 3000);
+			  }
+	
+			  var images = [], x = -1;
+			  images[0] = "Img/6-ways.png";
+			  images[1] = "Img/Summer.png";
+			  images[2] = "Img/startsometinhg.png";
+      		</script>
+            </div>
+            
+		<div id="MAIN_Right_Holder">
+<p>
+            	  <BP>FREE</BP>
+            	  <Arrow>>></arrow><br />
+            	  <SH>Join Now</SH>
+       	  </p>
+       	  <p>&nbsp;</p>
+          <div id="BulletItem"><Blue>»</Blue> Customized Content</div>
+          <div id="BulletItem"><Blue>»</Blue> Massive Online Community</div>
+          <div id="BulletItem"><Blue>»</Blue> Track Your Progress</div>
+          <div id="Sign_Up_BT">Sign up</div>
+        </div>
+        <div id="clearAll">
+        <ul>
+                	<li>Fitness Goal</li>
+                    <li><a href="#">Holiday Fir gift guid</a></li>
+                    <li><a href="#">Buy 1 get 1 free</a></li>
+        </ul>        
+        </div>
+        <div id="Left_Menu_BOX">
+        	<div id="Content">
+            	<a href="#"><Item>Home</Item></a>
+				<a href="#"><Item>Find A Plan</Item></a>
+                <a href="#"><Item>Store</Item></a>
+                <a href="#"><Item>Workouts</Item></a>
+                <a href="#"><Item>Nutrition</Item></a>
+                <a href="#"><Item>Supplementation</Item></a>
+            </div>
+        </div>
+        -
+        <div id="Center_Content">
+        	<div id="Title">Supplement Features</div><div id="Line"></div>
+            <div id="FeturedContent"><img src="Img/Home_Items.jpg" width="330" height="172" alt="Item" /></div><Txt2><hh2>Over 10,000,000 Orders Shipped!</hh2>
+              <h1>This is the Third Page EDIT</h1>
+            </Txt2>
+            	<div id="InvBreak_CLear"></div>
+            	<ul>
+            	  <li><a href="#">
+            	    <fh1>Workout</fh1>
+            	    <fh2>Programs</fh2>
+            	  </a></li>
+                  <li><a href="#">
+                    <fh1>Find a</fh1>
+                    <fh2>Plan</fh2>
+                  </a></li>
+                  <li><a href="#">
+                    <fh1>Top Selling</fh1>
+                    <fh2>Fat Burner</fh2>
+                  </a></li>
+       	  </ul>
+          
+				<div id="InvBreak_CLear"></div>
+           
+			<div id="Title">Latest Workout Articles</div><div id="Line"></div>
+            <div id="FeturedContent"><img src="Img/Home_Items2.jpg" width="330" height="172" alt="Item2" /></div><Txt2><hh2>Blueprint For Growth</hh2>
+              <h1>Want to be bigger, stronger, and fitter? Check out this one-year training plan that will work wonders on your physique!</h1>
+            </Txt2>
+            <div id="InvBreak_CLear"></div>
+            <div id="FeturedContent"><img src="Img/Home_Items3.jpg" width="330" height="172" alt="Item2" /></div><Txt2><hh2>Look Razor Sharp!</hh2>
+              <h1>Rodney Razor took some amazing steps to win the 2014 BodySpace Spokesmodel Contest. Follow his full plan!</h1>
+            </Txt2>
+            <div id="InvBreak_CLear"></div>
+        </div>      
+        <div id="Footer">MvBuidling.com</div>  
+    </div>
+    
+  </div>
+	<div id="Shrink_ALL">
+    	
+	</div>
+</div>
+<body onload = "startTimer()">
+       
+   </body>
+</body>
+</html>

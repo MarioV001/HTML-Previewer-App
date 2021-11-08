@@ -1,0 +1,240 @@
+﻿
+/* Custome Styles
+-------------------------------------------------- */
+#MAIN_TOP {
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background-color: #161616;
+    z-index: 111;
+}
+    #MAIN_TOP #Navigation {
+        height: 80px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    #MAIN_TOP #Top_MessageBox {
+        float: left;
+        height: 25px;
+        width: 145px;
+        margin-top: 3px;
+        text-align: right;
+        padding-right:13px;
+        background-color: #3baebe;
+        border-radius: 0px 0px 15px 0px;
+        font-family: Segoe UI, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+#SPLIT_MAIN {
+    margin-top: 100px;
+    height: 5px;
+    width: auto;
+    background-color: #f5425a;
+}
+#FOOTER_Main_Info {
+    height: 50px;
+    width: auto;
+    background-color: #e86848;
+    padding-top: 5px;
+    text-align: center;
+}
+#MAIN_BODY {
+    width: 1320px;
+    height: auto;
+    margin-top: 120px;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+}
+
+#MAIN_TOP #LOGO {
+    height: 80px;
+    width: 80px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10%;
+}
+
+#ERROR_DIV {
+    margin-top: 30px;
+    margin-bottom: 120px;
+    height: 130px;
+    padding-top:60px;
+    width: auto;
+    text-align:center;
+    background-color: #e02a2a;
+}
+/*Buttons*/
+.BButtons { /*ASP:Buttons*/
+    float: left;
+    width: auto;
+    height: 32px;
+    text-align: center;
+    padding-top: 8px;
+    margin-left: 35px;
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+    .BButtons:Hover { /*ASP:Buttons*/
+        color: #FFF;
+        text-decoration: none;
+        transform: scale(1.1);
+}
+.BButtons { /*ASP:Buttons*/
+    float: left;
+    width: auto;
+    height: 32px;
+    text-align: center;
+    padding-top: 8px;
+    margin-left: 35px;
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+    .BButtons:Hover { /*ASP:Buttons*/
+        color: #FFF;
+        text-decoration: none;
+        transform: scale(1.1);
+}
+
+.BButtonsRH { /*ASP:Buttons Right Side*/
+    float: right;
+    width: auto;
+    height: 32px;
+    text-align: center;
+    padding-top: 8px;
+    margin-right: 35px;
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+}
+    .BButtonsRH:Hover { /*ASP:Buttons Right Side*/
+        color: #FFF;
+        text-decoration: none;
+        transform: scale(1.1);
+}
+
+
+
+#MAIN_TOP #Navigation #Button a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+    #MAIN_TOP #Navigation #Button a:hover {
+        color: #FFF;
+        text-decoration: none;
+        font-size: 18px;
+        transform: scale(5);
+    }
+
+#URL_TextDIV {
+    float: left;
+    width: auto;
+    height: 32px;
+    padding-top: 15px;
+    padding-left: 9px;
+    background-color: transparent;
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    clear: right;
+    position: relative;
+}
+#URL_TextBoxDIV {
+    float: left;
+    width: 200px;
+    height: 32px;
+    padding-top: 8px;
+    padding-left: 9px;
+    text-transform: uppercase;
+}
+/*End*/
+/*Drop DOwn COntent*/
+.dropdown-content {
+    float: right;
+    clear: left;
+    margin-right: 25px;
+    margin-top: -34px;
+    position: static;
+    background-color: #f1f1f1;
+    min-width: 170px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+}
+    .dropdown-content .ButtonDrop {
+        width: 100%;
+        color: black;
+        border: none;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+        .dropdown-content .ButtonDrop:hover {
+            background-color: #ddd;
+        }
+
+/*End*/
+#ttl {
+    font-family: palanquin-med;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+#ttl-small {
+    font-family: palanquin;
+    font-size: 12px;
+    color: #666;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 13px;
+}
+
+body {
+    background-color: #F8F8F8;
+}
+
+* {
+    margin: 0px;
+}
+
+hed {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: #333;
+    font-weight: bolder;
+}
+
+hdr {
+    font-size: 40px;
+    font-weight: bolder;
+}
